@@ -1,0 +1,24 @@
+{
+  "name": "glowderma",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev":"node --watch --env-file=.env index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vrushi14/GlowDerma.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Vrushi14/GlowDerma/issues"
+  },
+  "homepage": "https://github.com/Vrushi14/GlowDerma#readme",
+  "description": "",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
