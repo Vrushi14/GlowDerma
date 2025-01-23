@@ -1,7 +1,11 @@
 import express from 'express';
+
 const app = express();
+
 let PORT = process.env.PORT || 330;
+
 app.use(express.json());
+
 app.get("/", (req, res) => {
     res.send("Welcome to GlowDerma - Your Skincare Journey Begins Here");
 });
@@ -86,13 +90,16 @@ app.get("/cart", (req, res) => {
     res.status(200).json(shoppingCart);
 });
 app.post("/cart", (req, res) => {
-    const { id, name, price, qty } = req.body;
-    if (id && name && price && qty) {
-        shoppingCart.push({ id, name, price, qty });
-        res.status(201).json({ message: "Successfully added item to cart", data: { id, name, price, qty } });
-    } else {
-        res.status(400).json({ error: "Please ensure all fields are provided" });
-    }
+    // const { id, name, price, qty } = req.body;
+    // if (id && name && price && qty) {
+    //   let x = { id, name, price, qty }
+    //     shoppingCart.push(x);
+    //     res.status(201).json({ message: "Successfully added item to cart", data: x});
+    // } else {
+    //     res.status(400).json({ error: "Please ensure all fields are provided" });
+    // }
+    console.log(req.body)
+    res.send("Got it")
 });
 app.get("/policy", (req, res) => {
     res.send("Policy Information");
