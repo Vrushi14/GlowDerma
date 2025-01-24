@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}}</title>
+    <style>
+        /* Body styles */
+        body {
+            font-family: 'Open Sans', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #ece9e6, #ffffff);
+            color: #222;
+            line-height: 1.6;
+        }
+
+        /* Header styles */
+        header {
+            background: linear-gradient(90deg, #ff7e5f, #feb47b);
+            color: white;
+            padding: 1.5rem;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin: 0;
+            letter-spacing: 2px;
+        }
+
+        /* Main content styles */
+        main {
+            padding: 2.5rem;
+            max-width: 900px;
+            margin: 3rem auto;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Footer styles */
+        footer {
+            background-color: #222;
+            color: #ddd;
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 3rem;
+            font-size: 1rem;
+            letter-spacing: 1px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        /* Card styles */
+        .appointment-card,
+        .offering-card,
+        .testimonial-card {
+            border: 1px solid #e0e0e0;
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin: 1.5rem 0;
+            background-color: #ffffff;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .appointment-card:hover,
+        .offering-card:hover,
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 18px rgba(0, 0, 0, 0.2);
+        }
+
+        .unavailable {
+            opacity: 0.7;
+            background-color: #ffe6e6;
+            border: 1px solid #ffcccc;
+        }
+
+        .unavailable-text {
+            color: #d32f2f;
+            font-weight: bold;
+        }
+
+        /* Grid styles */
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .testimonial-card {
+            background-color: #f7f7f7;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .testimonial-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>{{title}}</h1>
+    </header>
+    <main>
+        {{{body}}}
+    </main>
+    <footer>
+        <p>&copy; 2025 Your Clinic. All rights reserved.</p>
+    </footer>
+</body>
+</html>

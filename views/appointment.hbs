@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}}</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f0f4f8;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #4caf50;
+            color: white;
+            padding: 1.5rem;
+            text-align: center;
+            font-size: 2.2rem;
+            letter-spacing: 1.5px;
+            font-weight: bold;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        section.card {
+            padding: 2rem;
+            max-width: 700px;
+            margin: 3rem auto;
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        section h2 {
+            font-size: 1.8rem;
+            color: #4caf50;
+            text-align: center;
+            margin-bottom: 2rem;
+            text-transform: capitalize;
+            border-bottom: 2px solid #4caf50;
+            display: inline-block;
+            padding-bottom: 0.5rem;
+        }
+
+        section p {
+            font-size: 1.1rem;
+            margin-bottom: 1.2rem;
+        }
+
+        section p strong {
+            color: #333;
+            font-weight: bold;
+        }
+
+        .appointment-card {
+            border: 1px solid #e0e0e0;
+            padding: 1.5rem;
+            border-radius: 12px;
+            background-color: #f9f9f9;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            margin: 1rem 0;
+            transition: all 0.3s ease;
+        }
+
+        .appointment-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+        }
+
+        footer {
+            background-color: #4caf50;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        @media (max-width: 768px) {
+            section.card {
+                padding: 1.5rem;
+                margin: 2rem 1rem;
+            }
+
+            section h2 {
+                font-size: 1.5rem;
+            }
+
+            section p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Appointment Confirmation</h1>
+    </header>
+
+    <section class="card">
+        <h2>Appointment Details</h2>
+        <div class="appointment-card">
+            <p><strong>Name:</strong> {{appointment.name}}</p>
+            <p><strong>Email:</strong> {{appointment.email}}</p>
+            <p><strong>Service:</strong> {{appointment.service}}</p>
+            <p><strong>Date:</strong> {{appointment.preferredDate}}</p>
+            <p><strong>Time:</strong> {{appointment.preferredTime}}</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 GlowDerma. All rights reserved.</p>
+    </footer>
+</body>
+</html>

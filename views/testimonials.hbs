@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}}</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Poppins', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f7f9fc;
+            color: #2c3e50;
+            line-height: 1.8;
+        }
+
+        /* Header Styling */
+        header {
+            background: linear-gradient(135deg, #3498db, #2ecc71);
+            color: #fff;
+            padding: 2rem;
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Main Content Styling */
+        main {
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 2rem auto;
+        }
+
+        /* Testimonial Grid */
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        /* Card Styling */
+        .card {
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: #34495e;
+            font-weight: 600;
+        }
+
+        .card p {
+            font-size: 1rem;
+            margin-bottom: 0.8rem;
+            color: #7f8c8d;
+        }
+
+        .card p strong {
+            color: #27ae60;
+            font-weight: 700;
+        }
+
+        .card em {
+            font-style: italic;
+            font-size: 0.9rem;
+            color: #95a5a6;
+        }
+
+        .stars {
+            color: #f1c40f;
+            font-size: 1.2rem;
+        }
+
+        /* Unavailable Styling */
+        .unavailable {
+            background-color: #ffe6e6;
+            opacity: 0.8;
+            padding: 1.2rem;
+            border-radius: 12px;
+        }
+
+        .unavailable-text {
+            color: #e74c3c;
+            font-size: 1rem;
+            font-weight: bold;
+        }
+
+        /* Footer Styling */
+        footer {
+            background: #34495e;
+            color: #ecf0f1;
+            text-align: center;
+            padding: 1.5rem;
+            font-size: 1rem;
+            letter-spacing: 1px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Customer Testimonials</h1>
+    </header>
+
+    <main>
+        <section class="testimonial-grid">
+            {{#each testimonials}}
+            <div class="card">
+                <h3>{{name}}</h3>
+                <p><strong>Rating:</strong> <span class="stars">{{renderStars rating}}</span></p>
+                <p>"{{comment}}"</p>
+                <p><em>{{formatDate date}}</em></p>
+            </div>
+            {{/each}}
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Your Company. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
